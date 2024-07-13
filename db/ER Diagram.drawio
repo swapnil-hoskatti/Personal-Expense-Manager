@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2024-07-13T07:44:27.401Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="bOYaEYBjIIuR9tvXoEV_" version="24.6.5" type="device">
+  <diagram name="Page-1" id="efa7a0a1-bf9b-a30e-e6df-94a7791c09e9">
+    <mxGraphModel dx="1195" dy="603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-125" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;users&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id SERIAL NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;username VARCHAR(255) NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;password VARCHAR(255) NOT NULL&lt;br&gt;first_name VARCHAR(255) NOT NULL&lt;br&gt;last_name VARCHAR(255)&lt;br&gt;created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP&lt;br&gt;modified_at TIMESTAMP DEFAULT NULL&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="190" width="420" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-126" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;users_cards&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id SERIAL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK1&lt;/td&gt;&lt;td&gt;user_id INT NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK2&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;card_id INT NOT NULL&lt;br&gt;last_four CHAR(4) NOT NULL&lt;br&gt;created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP&lt;br&gt;modified_at TIMESTAMP DEFAULT NULL&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="380" width="420" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-127" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;cards&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id SERIAL NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;title VARCHAR(255) NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;brand VARCHAR(255) NOT NULL&lt;br&gt;type ENUM(&#39;debit&#39;,&#39;credit&#39;) NOT NULL&lt;br&gt;description VARCHAR(255)&lt;br&gt;created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP&lt;br&gt;modified_at TIMESTAMP DEFAULT NULL&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="740" width="420" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-128" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;transaction&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id SERIAL NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK1&lt;/td&gt;&lt;td&gt;user_card_id INT NOT NULL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;amount DECIMAL(10,2) NOT NULL&lt;br&gt;transaction_type ENUM(&#39;debit&#39;,&#39;credit&#39;) NOT NULL&lt;br&gt;created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP&lt;br&gt;modified_at TIMESTAMP DEFAULT NULL&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="260" y="560" width="420" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-129" value="Relation" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=-0.002;exitY=0.353;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.001;entryY=0.204;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bk5nBPlpVMJShVZ8OTbo-128" target="bk5nBPlpVMJShVZ8OTbo-126">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="810" as="sourcePoint" />
+            <mxPoint x="320" y="810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="606" />
+              <mxPoint x="180" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-130" value="0..n" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="bk5nBPlpVMJShVZ8OTbo-129">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-131" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" connectable="0" vertex="1" parent="bk5nBPlpVMJShVZ8OTbo-129">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-132" value="Relation" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0;entryY=0.201;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="bk5nBPlpVMJShVZ8OTbo-126" target="bk5nBPlpVMJShVZ8OTbo-127">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="500" as="sourcePoint" />
+            <mxPoint x="190" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="440" />
+              <mxPoint x="130" y="766" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-133" value="0..n" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="bk5nBPlpVMJShVZ8OTbo-132">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-134" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" connectable="0" vertex="1" parent="bk5nBPlpVMJShVZ8OTbo-132">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-135" value="Relation" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.388;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.209;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="bk5nBPlpVMJShVZ8OTbo-126" target="bk5nBPlpVMJShVZ8OTbo-125">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="633" as="sourcePoint" />
+            <mxPoint x="400" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="427" />
+              <mxPoint x="200" y="217" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-136" value="0..n" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="bk5nBPlpVMJShVZ8OTbo-135">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bk5nBPlpVMJShVZ8OTbo-137" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" connectable="0" vertex="1" parent="bk5nBPlpVMJShVZ8OTbo-135">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,35 @@
+# Visual Studio Code Directory
+.vscode/
+
+# Node Modules Directory
+node_modules/
+
+# Build Directory
+build/
+
+# Local Environment Files
+.env.local
+
+# Next.js Directory
+.next/
+
+# Out Directory
+out/
+
+# Coverage Directory
+coverage/
+
+# Production Directory
+build/
+
+# Debug Files
+npm-debug.log*
+
+# Yarn Debug Files
+yarn-debug.log*
+
+# Yarn Error Files
+yarn-error.log*
+
+# TypeScript Files
+*.tsbuildinfo
