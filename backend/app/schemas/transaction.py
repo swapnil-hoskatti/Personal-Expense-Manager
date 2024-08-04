@@ -10,13 +10,13 @@ class TransactionAdd(TransactionBase):
     transaction_type: str
     description: str
 
-class User(TransactionBase):
+class Transaction(TransactionBase):
     id: int
-    email: str
-    username: str
-    first_name: str
-    last_name: str
-    is_active: bool
+    user_card_id: int
+    amount: float
+    transaction_type: str
+    created_at: str
+    modified_at: str
 
     class Config:
         orm_mode = True
